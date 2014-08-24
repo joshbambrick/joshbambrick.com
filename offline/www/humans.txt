@@ -1,0 +1,13 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Josh Bambrick -- Software Engineer
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Sass, inuitcss, Typeplate
+    Modernizr, HTML5Boilerplate, html5shiv
+    jQuery, Backbone, Underscore, RequireJS

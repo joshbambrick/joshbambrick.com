@@ -1,0 +1,151 @@
+/*------------------------------------*\
+    #COMMON
+\*------------------------------------*/
+/**
+ * common variables which can be used by any plugins, these will be defined below
+ */
+/*------------------------------------*\
+    #TYPEPLATE
+\*------------------------------------*/
+/**
+ * variables for the typeplate plugin, for typography
+ */
+/*------------------------------------*\
+    #INUIT
+\*------------------------------------*/
+/**
+ * variables for the unuit plugin
+ */
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+.header {
+  -skrollr-animation-name: headerSqueeze;
+}
+
+.header__contents {
+  -skrollr-animation-name: headerContentsSqueeze;
+}
+
+.header__title--first-word {
+  position: relative;
+  -skrollr-animation-name: headerFirstTitleMove;
+}
+
+.header__title--second-word {
+  position: relative;
+  -skrollr-animation-name: headerSecondTitleMove;
+}
+
+.header__rest-of-title {
+  -skrollr-animation-name: restOfTitleDisappear;
+}
+
+.header__tag {
+  -skrollr-animation-name: tagMove;
+}
+
+@-skrollr-keyframes headerSqueeze {
+  0 {
+    height: 500px;
+  }
+
+  400 {
+    height: 117;
+  }
+}
+@-skrollr-keyframes headerContentsSqueeze {
+  0 {
+    bottom: 50px;
+  }
+
+  400 {
+    bottom: 0;
+  }
+}
+@-skrollr-keyframes headerFirstTitleMove {
+  75 {
+    bottom: 0px;
+  }
+
+  400 {
+    bottom: -176.4;
+  }
+}
+@-skrollr-keyframes headerSecondTitleMove {
+  0 {
+    left: 0px;
+  }
+
+  75 {
+    left: 60px;
+    bottom: 0px;
+  }
+
+  400 {
+    bottom: -59.4;
+  }
+}
+@-skrollr-keyframes restOfTitleDisappear {
+  75 {
+    opacity: 1;
+  }
+
+  400 {
+    opacity: 0;
+  }
+}
+@-skrollr-keyframes tagMove {
+  0 {
+    margin-top: 50px;
+    left: 0px;
+  }
+
+  400 {
+    margin-top: 0px;
+    left: 150px;
+  }
+}
+.nav {
+  -skrollr-animation-name: navScroll;
+}
+
+@-skrollr-keyframes navScroll {
+  0 {
+    position: relative;
+    top: 29.7px;
+    left: 0%;
+  }
+
+  384 {
+    position: relative;
+    top: 29.7px;
+    left: 0%;
+  }
+
+  385 {
+    position: fixed;
+    top: 146.7px;
+    left: 5%;
+  }
+}
+.section-piece {
+  -skrollr-animation-name: backgroundParallax;
+}
+
+@-skrollr-keyframes backgroundParallax {
+  top {
+    background-position: 0 -50px;
+  }
+
+  bottom {
+    background-position: 0 50px;
+  }
+}

@@ -1,0 +1,167 @@
+/*------------------------------------*\
+    #COMMON
+\*------------------------------------*/
+
+/**
+ * common variables which can be used by any plugins, these will be defined below
+ */
+
+$lib-standard-default-font-size: 16px;
+
+$lib-pixel-default-font-size: 18px;
+// percentage value (112.5%)
+$lib-percentage-font-size: ($lib-pixel-default-font-size / $lib-standard-default-font-size) * 100;
+// standard font-weight
+$lib-font-weight: normal;
+// (1.65 * 18px = 29.7px)
+$lib-line-height: 1.65;
+// Non-font-face font-stack
+$lib-font-family: serif;
+// Custom font-face stack, if set will be added to the $font-family
+$lib-custom-font-family: false;
+
+
+$lib-spacing-unit: $lib-line-height * $lib-pixel-default-font-size;
+$lib-spacing-unit--small:    round($lib-spacing-unit / 2);
+$lib-spacing-unit--large:    round($lib-spacing-unit * 2);
+
+$lib-body-color: #444;
+$lib-heading-color: #222;
+
+/*------------------------------------*\
+    #TYPEPLATE
+\*------------------------------------*/
+
+/**
+ * variables for the typeplate plugin, for typography
+ */
+
+
+// $BaseType
+// -------------------------------------//
+
+$font-weight: $lib-font-weight;
+$line-height: $lib-line-height;
+$font-size: $lib-percentage-font-size;
+// strip units
+$font-base: $lib-pixel-default-font-size / ($lib-pixel-default-font-size * 0 + 1);;
+$font-family: $lib-font-family;
+
+$custom-font-family: $lib-custom-font-family;
+
+
+// $Paragraphs
+// -------------------------------------//
+
+// Text Indentation Value
+$indent-val: 1.5em;
+
+// Paragraph Styling Boolean
+// 'false' means no vertical whitespace
+// between subsequent paragraphs.
+$paragraph-vertical-whitespace: false;
+
+
+// $Small Print
+// -------------------------------------//
+
+$small-print-size: 65%;
+
+
+// $Color
+// -------------------------------------//
+
+$body-copy-color: $lib-body-color;
+$heading-color: $lib-heading-color;
+
+
+// $Ampersand
+// -------------------------------------//
+
+$amp-fontface-name: Ampersand;
+$amp-fontface-source: local('Georgia'), local('Garamond'), local('Palatino'), local('Book Antiqua');
+$amp-fontface-fallback: local('Georgia');
+
+// Allows for our ampersand element to have differing
+// font-family from the ampersand unicode font-family.
+$amp-font-family: Verdana, sans-serif;
+
+
+// $Icon-Font-Helper
+// -------------------------------------//
+// ex.1) $icon-fonts: (icon-name);
+// ex.2) $icon-fonts: (icon-name1, icon-name2, icon-name3);
+$icon-fonts: null;
+
+
+// $TypeScale
+// -------------------------------------//
+
+$tera: 117; // 117 = 18 × 6.5
+$giga: 90; // 90 = 18 × 5
+$mega: 72; // 72 = 18 × 4
+$alpha: 60; // 60 = 18 × 3.3333
+$beta: 48; // 48 = 18 × 2.6667
+$gamma: 36; // 36 = 18 × 2
+$delta: 24; // 24 = 18 × 1.3333
+$epsilon: 21; // 21 = 18 × 1.1667
+$zeta: 18; // 18 = 18 × 1
+
+
+// $TypeScale-Unit
+// -------------------------------------//
+
+$type-scale-unit-value: rem;
+
+
+// $Pull-Quotes
+// -------------------------------------//
+
+$pull-quote-fontsize: 4em;
+$pull-quote-opacity: 0.5;
+$pull-quote-color: #dc976e;
+
+
+// $Citation
+// -------------------------------------//
+
+$cite-display: block;
+$cite-text-align: right;
+$cite-font-size: inherit;
+
+
+// $SmallCaps
+// -------------------------------------//
+
+$small-caps-color: gray;
+$small-caps-weight: 600;
+
+
+// $DropCap
+// -------------------------------------//
+
+$dropcap-float-position: left;
+$dropcap-font-size: 4em;
+$dropcap-font-family: inherit;
+$dropcap-txt-indent: 0;
+$dropcap-margin: inherit;
+$dropcap-padding: inherit;
+$dropcap-color: inherit;
+$dropcap-line-height: 1;
+$dropcap-bg: transparent;
+
+
+/*------------------------------------*\
+    #INUIT
+\*------------------------------------*/
+
+/**
+ * variables for the unuit plugin
+ */
+
+
+$inuit-base-font-size:              $lib-pixel-default-font-size;
+// inuit converts this back to non-pixel equivalent
+$inuit-base-line-height:            $lib-line-height * $lib-pixel-default-font-size;
+
+$inuit-base-text-color:             $lib-body-color;

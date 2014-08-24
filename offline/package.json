@@ -1,0 +1,24 @@
+{
+  "name": "JoshBambrick",
+  "description": "Nameplate website for Josh Bambrick",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshbambrick/joshbambrick.com"
+  },
+  "dependencies": {
+    "express": "3.2.x"
+  },
+  "devDependencies": {
+    "nodemon": "0.7.8"
+  },
+  "main": "server.js",
+  "config": {
+    "test": true
+  }
+}

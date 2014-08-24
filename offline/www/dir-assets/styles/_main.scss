@@ -1,0 +1,32 @@
+// settings for all library packages
+@import "lib/lib-settings";
+
+// settings
+@import "lib/inuit/defaults/settings.defaults";
+
+// tools
+@import "lib/inuit/functions/tools.functions";
+
+// generic
+@import "lib/inuit/normalize/generic.normalize";
+@import "lib/inuit/reset/generic.reset";
+@import "lib/inuit/box-sizing/generic.box-sizing";
+
+// trumps
+@import "lib/inuit/spacing/trumps.spacing";
+@import "lib/inuit/clearfix/trumps.clearfix";
+
+// objects
+@import "lib/inuit/list-inline/objects.list-inline";
+@import "lib/inuit/list-block/objects.list-block";
+@import "lib/inuit/list-bare/objects.list-bare";
+
+// base
+@import "lib/inuit/images/base.images";
+@import "lib/inuit/lists/base.lists";
+
+// typeplate typography overrides inuit
+@import "lib/typeplate/typeplate";
+
+// page base
+@import "base/page";

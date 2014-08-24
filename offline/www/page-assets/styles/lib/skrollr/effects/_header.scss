@@ -1,0 +1,98 @@
+.header {
+    -skrollr-animation-name: headerSqueeze;
+}
+
+.header__contents {
+    -skrollr-animation-name: headerContentsSqueeze;
+}
+
+.header__title--first-word {
+    position: relative;
+    -skrollr-animation-name: headerFirstTitleMove;
+}
+
+.header__title--second-word {
+    position: relative;
+    -skrollr-animation-name: headerSecondTitleMove;
+}
+
+.header__rest-of-title {
+    -skrollr-animation-name: restOfTitleDisappear;
+}
+
+.header__tag {
+    -skrollr-animation-name: tagMove;
+}
+
+@-skrollr-keyframes headerSqueeze {
+    0 {
+        height: 500px;
+    }
+
+    400 {
+        // -(height of title + height of tag)
+        // NOTE: must keep up to date with actual height
+        height: $tera;
+    }
+}
+
+@-skrollr-keyframes headerContentsSqueeze {
+    0 {
+        bottom: 50px;
+    }
+
+    400 {
+        bottom: 0;
+    }
+}
+
+@-skrollr-keyframes headerFirstTitleMove {
+    75 {
+        bottom: 0px;
+    }
+
+    400 {
+        // -(height of title + height of tag)
+        // NOTE: must keep up to date with actual height
+        bottom: -($tera + ($gamma * $lib-line-height));
+    }
+}
+
+@-skrollr-keyframes headerSecondTitleMove {
+    0 {
+        left: 0px;
+    }
+
+    75 {
+        left: 60px;
+        bottom: 0px;
+    }
+
+    400 {
+        // -(height of tag)
+        // NOTE: must keep up to date with actual height
+        bottom: -($gamma * $lib-line-height);
+    }
+}
+
+@-skrollr-keyframes restOfTitleDisappear {
+    75 {
+        opacity: 1;
+    }
+
+    400 {
+        opacity: 0;
+    }
+}
+
+@-skrollr-keyframes tagMove {
+    0 {
+        margin-top: 50px;
+        left: 0px;
+    }
+
+    400 {
+        margin-top: 0px;
+        left: 150px;
+    }
+}

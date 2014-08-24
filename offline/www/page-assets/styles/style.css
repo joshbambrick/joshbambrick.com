@@ -1,0 +1,2176 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    #COMMON
+\*------------------------------------*/
+/**
+ * common variables which can be used by any plugins, these will be defined below
+ */
+/*------------------------------------*\
+    #TYPEPLATE
+\*------------------------------------*/
+/**
+ * variables for the typeplate plugin, for typography
+ */
+/*------------------------------------*\
+    #INUIT
+\*------------------------------------*/
+/**
+ * variables for the unuit plugin
+ */
+/*!
+ * inuitcss, by @csswizardry
+ *
+ * github.com/inuitcss | inuitcss.com
+ */
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/*------------------------------------*\
+    #RESET
+\*------------------------------------*/
+/**
+ * As well as using normalize.css, it is often advantageous to remove all
+ * margins from certain elements.
+ */
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+figure,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+abbr[title],
+dfn[title] {
+  cursor: help;
+}
+
+/**
+ * Remove underlines from potentially troublesome elements.
+ */
+u,
+ins {
+  text-decoration: none;
+}
+
+/**
+ * Apply faux underlines to inserted text via `border-bottom`.
+ */
+ins {
+  border-bottom: 1px solid;
+}
+
+/*------------------------------------*\
+    #BOX-SIZING
+\*------------------------------------*/
+/**
+ * Set the global `box-sizing` state to `border-box`.
+ *
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ * paulirish.com/2012/box-sizing-border-box-ftw
+ */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/*------------------------------------*\
+    #SPACING
+\*------------------------------------*/
+/**
+ * Margin and padding helper classes. Use these to tweak layout on a micro
+ * level.
+ *
+ * `.(m|p)(t|r|b|l|h|v)(-|+|0) {}` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
+ */
+/*------------------------------------*\
+    #CLEARFIX
+\*------------------------------------*/
+/**
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Extend the clearfix class with Sass to avoid the `.clearfix` class appearing
+ * over and over in your markup.
+ */
+.clearfix:after,
+.section-piece:after,
+.section-piece__contents-wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*------------------------------------*\
+    #LIST-INLINE
+\*------------------------------------*/
+/**
+ * The list-inline object simply displays a list of items in one line.
+ */
+.list-inline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.list-inline > li {
+  display: inline-block;
+}
+
+/*------------------------------------*\
+    #LIST-BLOCK
+\*------------------------------------*/
+/**
+ * The list-block object creates blocky list items out of a `ul` or `ol`.
+ */
+.list-block {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list-block__item,
+.list-block > li {
+  padding: 29.7px;
+}
+
+/*------------------------------------*\
+    #LIST-BARE
+\*------------------------------------*/
+/**
+ * The list-bare object simply removes any indents and bullet points from lists.
+ */
+.list-bare,
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*------------------------------------*\
+    #IMAGES
+\*------------------------------------*/
+/**
+ * 1. Fluid images for responsive purposes.
+ * 2. Offset `alt` text from surrounding copy.
+ * 3. Setting `vertical-align` removes the whitespace that appears under `img`
+ *    elements when they are dropped into a page as-is. Safer alternative to
+ *    using `display: block;`.
+ */
+img {
+  max-width: 100%;
+  /* [1] */
+  font-style: italic;
+  /* [2] */
+  vertical-align: middle;
+  /* [3] */
+}
+
+/**
+ * 1. Google Maps breaks if `max-width: 100%` acts upon it; use their selector
+ *    to remove the effects.
+ * 2. If a `width` and/or `height` attribute have been explicitly defined, let’s
+ *    not make the image fluid.
+ */
+.gm-style img,
+img[width],
+img[height] {
+  /* [2] */
+  max-width: none;
+}
+
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+/**
+ * Remove extra vertical spacing when nesting lists.
+ */
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+/*!
+TYPEPLATE
+URL ........... http://typeplate.com
+VERSION ....... 1.1.4
+Github ........ https://github.com/typeplate/bower
+AUTHORS ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+LICENSE ....... Creative Commmons Attribution 3.0 (http://creativecommons.org/licenses/by/3.0)
+LICENSE URL ... https://github.com/typeplate/bower/blob/master/license.txt
+*/
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
+  unicode-range: U+0026;
+}
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia");
+  unicode-range: U+270C;
+}
+body {
+  word-wrap: break-word;
+}
+
+pre code {
+  word-wrap: normal;
+}
+
+/**
+ * Dropcap Sass @include
+ * Use the following Sass @include with any selector you feel necessary.
+ *
+	@include dropcap($dropcap-float-position, $dropcap-font-size, $dropcap-font-family, $dropcap-txt-indent, $dropcap-margin, $dropcap-padding, $dropcap-color, $dropcap-line-height, $dropcap-bg);
+ *
+ * Extend this object into your custom stylesheet. Let the variables do the work.
+ *
+ */
+html {
+  font: normal 112.5%/1.65 serif;
+}
+
+body {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  color: #444444;
+}
+
+small {
+  font-size: 65%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+}
+
+.tera, .header__title {
+  font-size: 117px;
+  font-size: 6.5rem;
+  margin-bottom: 4.56923px;
+  margin-bottom: 0.25385rem;
+}
+
+.giga {
+  font-size: 90px;
+  font-size: 5rem;
+  margin-bottom: 5.94px;
+  margin-bottom: 0.33rem;
+}
+
+.mega {
+  font-size: 72px;
+  font-size: 4rem;
+  margin-bottom: 7.425px;
+  margin-bottom: 0.4125rem;
+}
+
+.alpha, h1, .section-piece__title {
+  font-size: 60px;
+  font-size: 3.33333rem;
+  margin-bottom: 8.91px;
+  margin-bottom: 0.495rem;
+}
+
+.beta, h2 {
+  font-size: 48px;
+  font-size: 2.66667rem;
+  margin-bottom: 11.1375px;
+  margin-bottom: 0.61875rem;
+}
+
+.gamma, h3, .header__tag {
+  font-size: 36px;
+  font-size: 2rem;
+  margin-bottom: 14.85px;
+  margin-bottom: 0.825rem;
+}
+
+.delta, h4 {
+  font-size: 24px;
+  font-size: 1.33333rem;
+  margin-bottom: 22.275px;
+  margin-bottom: 1.2375rem;
+}
+
+.epsilon, h5 {
+  font-size: 21px;
+  font-size: 1.16667rem;
+  margin-bottom: 25.45714px;
+  margin-bottom: 1.41429rem;
+}
+
+.zeta, h6 {
+  font-size: 18px;
+  font-size: 1rem;
+  margin-bottom: 29.7px;
+  margin-bottom: 1.65rem;
+}
+
+p {
+  margin: auto auto 1.5em;
+}
+p + p {
+  text-indent: 1.5em;
+  margin-top: -1.5em;
+}
+
+abbr,
+acronym,
+blockquote,
+code,
+dir,
+kbd,
+listing,
+plaintext,
+q,
+samp,
+tt,
+var,
+xmp {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -o-hyphens: none;
+  hyphens: none;
+}
+
+pre code {
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+}
+
+pre {
+  white-space: pre;
+}
+
+code {
+  white-space: pre;
+  font-family: monospace;
+}
+
+/**
+ * Abbreviations Markup
+ *
+	<abbr title="hyper text markup language">HMTL</abbr>
+ *
+ * Extend this object into your markup.
+ *
+ */
+abbr {
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: gray;
+}
+abbr[title]:hover {
+  cursor: help;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222222;
+}
+
+p + .drop-cap {
+  text-indent: 0;
+  margin-top: 0;
+}
+
+.drop-cap:first-letter {
+  float: left;
+  margin: inherit;
+  padding: inherit;
+  font-size: 4em;
+  font-family: inherit;
+  line-height: 1;
+  text-indent: 0;
+  background: transparent;
+  color: inherit;
+}
+
+/**
+ * Lining Definition Style Markup
+ *
+	<dl class="lining">
+		<dt><b></b></dt>
+		<dd></dd>
+	</dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+.lining dt,
+.lining dd {
+  display: inline;
+  margin: 0;
+}
+.lining dt + dt:before,
+.lining dd + dt:before {
+  content: "\A";
+  white-space: pre;
+}
+.lining dd + dd:before {
+  content: ", ";
+}
+.lining dd:before {
+  content: ": ";
+  margin-left: -0.2rem;
+}
+
+/**
+ * Dictionary Definition Style Markup
+ *
+	<dl class="dictionary-style">
+		<dt><b></b></dt>
+			<dd></dd>
+	</dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+.dictionary-style dt {
+  display: inline;
+  counter-reset: definitions;
+}
+.dictionary-style dt + dt:before {
+  content: ", ";
+  margin-left: -0.2rem;
+}
+.dictionary-style dd {
+  display: block;
+  counter-increment: definitions;
+}
+.dictionary-style dd:before {
+  content: counter(definitions,decimal) ". ";
+}
+
+/**
+ * Blockquote Markup
+ *
+		<figure>
+			<blockquote cite="">
+				<p></p>
+			</blockquote>
+			<figcaption>
+				<cite>
+					<small><a href=""></a></small>
+				</cite>
+			</figcaption>
+		</figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Pull Quotes Markup
+ *
+	<aside class="pull-quote">
+		<blockquote>
+			<p></p>
+		</blockquote>
+	</aside>
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+.pull-quote {
+  position: relative;
+  padding: 1em;
+}
+.pull-quote:before, .pull-quote:after {
+  height: 1em;
+  opacity: 0.5;
+  position: absolute;
+  font-size: 4em;
+  color: #dc976e;
+}
+.pull-quote:before {
+  content: '“';
+  top: 0;
+  left: 0;
+}
+.pull-quote:after {
+  content: '”';
+  bottom: 0;
+  right: 0;
+}
+
+/**
+ * Figures Markup
+ *
+	<figure>
+		<figcaption>
+			<strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
+		</figcaption>
+	</figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Footnote Markup : Replace 'X' with your unique number for each footnote
+ *
+	<article>
+		<p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
+		<footer>
+			<ol class="foot-notes">
+				<li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
+			</ol>
+		</footer>
+	</article>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+/**
+ * High-, page-level styling.
+ *
+ * 1. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 2. Ensure the page always fills at least the entire height of the viewport.
+ * 3. Prevent certain mobile browsers from automatically zooming fonts.
+ * 4. Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing.
+ */
+html {
+  overflow-y: scroll;
+  /* [1] */
+  min-height: 100%;
+  /* [2] */
+  -webkit-text-size-adjust: 100%;
+  /* [3] */
+  -ms-text-size-adjust: 100%;
+  /* [3] */
+  -moz-osx-font-smoothing: grayscale;
+  /* [4] */
+  -webkit-font-smoothing: antialiased;
+  /* [4] */
+}
+
+body.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+.nav__list, .section-piece__contents {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: solid 15px transparent;
+}
+
+/*------------------------------------*\
+    #WIDTHS-RESPONSIVE
+\*------------------------------------*/
+/**
+ * Responsive width classes.
+ */
+/**
+ * Whole.
+ */
+@media screen and (max-width: 719px) {
+  .palm-one-whole {
+    width: 100% !important;
+  }
+}
+
+/**
+ * Halves.
+ */
+@media screen and (max-width: 719px) {
+  .palm-one-half, .palm-two-quarters, .palm-three-sixths, .palm-four-eighths, .palm-five-tenths, .palm-six-twelfths {
+    width: 50% !important;
+  }
+}
+
+/**
+ * Thirds.
+ */
+@media screen and (max-width: 719px) {
+  .palm-one-third, .palm-two-sixths, .palm-three-nineths, .palm-four-twelfths {
+    width: 33.3333333% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-two-thirds, .palm-four-sixths, .palm-six-nineths, .palm-eight-twelfths {
+    width: 66.6666666% !important;
+  }
+}
+
+/**
+ * Quarters.
+ */
+@media screen and (max-width: 719px) {
+  .palm-one-quarter, .palm-two-eighths, .palm-three-twelfths {
+    width: 25% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-three-quarters, .palm-six-eighths, .palm-nine-twelfths {
+    width: 75% !important;
+  }
+}
+
+/**
+ * Fifths.
+ */
+@media screen and (max-width: 719px) {
+  .palm-one-fifth, .palm-two-tenths {
+    width: 20% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-two-fifths, .palm-four-tenths {
+    width: 40% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-three-fifths, .palm-six-tenths {
+    width: 60% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-four-fifths, .palm-eight-tenths {
+    width: 80% !important;
+  }
+}
+
+/**
+ * Sixthss.
+ */
+@media screen and (max-width: 719px) {
+  .palm-one-sixth, .palm-two-twelfths {
+    width: 16.6666666% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-five-sixths, .palm-ten-twelfths {
+    width: 83.3333333% !important;
+  }
+}
+
+/**
+ * Eighths.
+ */
+@media screen and (max-width: 719px) {
+  .palm-one-eighth {
+    width: 12.5% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-three-eighths {
+    width: 37.5% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-five-eighths {
+    width: 62.5% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-seven-eighths {
+    width: 87.5% !important;
+  }
+}
+
+/**
+ * Ninths.
+ */
+@media screen and (max-width: 719px) {
+  .palm-one-nineth {
+    width: 11.1111111% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-two-nineths {
+    width: 22.2222222% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-four-nineths {
+    width: 44.4444444% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-five-nineths {
+    width: 55.5555555% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-seven-nineths {
+    width: 77.7777777% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-eight-nineths {
+    width: 88.8888888% !important;
+  }
+}
+
+/**
+ * Tenths.
+ */
+@media screen and (max-width: 719px) {
+  .palm-one-tenth {
+    width: 10% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-three-tenths {
+    width: 30% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-seven-tenths {
+    width: 70% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-nine-tenths {
+    width: 90% !important;
+  }
+}
+
+/**
+ * Twelfths.
+ */
+@media screen and (max-width: 719px) {
+  .palm-one-twelfth {
+    width: 8.3333333% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-five-twelfths {
+    width: 41.6666666% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-seven-twelfths {
+    width: 58.3333333% !important;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .palm-eleven-twelfths {
+    width: 91.6666666% !important;
+  }
+}
+
+/**
+ * Whole.
+ */
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-one-whole {
+    width: 100% !important;
+  }
+}
+
+/**
+ * Halves.
+ */
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-one-half, .lap-two-quarters, .lap-three-sixths, .lap-four-eighths, .lap-five-tenths, .lap-six-twelfths {
+    width: 50% !important;
+  }
+}
+
+/**
+ * Thirds.
+ */
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-one-third, .lap-two-sixths, .lap-three-nineths, .lap-four-twelfths {
+    width: 33.3333333% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-two-thirds, .lap-four-sixths, .lap-six-nineths, .lap-eight-twelfths {
+    width: 66.6666666% !important;
+  }
+}
+
+/**
+ * Quarters.
+ */
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-one-quarter, .nav__list, .lap-two-eighths, .lap-three-twelfths {
+    width: 25% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-three-quarters, .section-piece__contents, .lap-six-eighths, .lap-nine-twelfths {
+    width: 75% !important;
+  }
+}
+
+/**
+ * Fifths.
+ */
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-one-fifth, .lap-two-tenths {
+    width: 20% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-two-fifths, .lap-four-tenths {
+    width: 40% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-three-fifths, .lap-six-tenths {
+    width: 60% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-four-fifths, .lap-eight-tenths {
+    width: 80% !important;
+  }
+}
+
+/**
+ * Sixthss.
+ */
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-one-sixth, .lap-two-twelfths {
+    width: 16.6666666% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-five-sixths, .lap-ten-twelfths {
+    width: 83.3333333% !important;
+  }
+}
+
+/**
+ * Eighths.
+ */
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-one-eighth {
+    width: 12.5% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-three-eighths {
+    width: 37.5% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-five-eighths {
+    width: 62.5% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-seven-eighths {
+    width: 87.5% !important;
+  }
+}
+
+/**
+ * Ninths.
+ */
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-one-nineth {
+    width: 11.1111111% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-two-nineths {
+    width: 22.2222222% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-four-nineths {
+    width: 44.4444444% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-five-nineths {
+    width: 55.5555555% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-seven-nineths {
+    width: 77.7777777% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-eight-nineths {
+    width: 88.8888888% !important;
+  }
+}
+
+/**
+ * Tenths.
+ */
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-one-tenth {
+    width: 10% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-three-tenths {
+    width: 30% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-seven-tenths {
+    width: 70% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-nine-tenths {
+    width: 90% !important;
+  }
+}
+
+/**
+ * Twelfths.
+ */
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-one-twelfth {
+    width: 8.3333333% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-five-twelfths {
+    width: 41.6666666% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-seven-twelfths {
+    width: 58.3333333% !important;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  .lap-eleven-twelfths {
+    width: 91.6666666% !important;
+  }
+}
+
+/**
+ * Whole.
+ */
+@media screen and (min-width: 720px) {
+  .lap-and-up-one-whole {
+    width: 100% !important;
+  }
+}
+
+/**
+ * Halves.
+ */
+@media screen and (min-width: 720px) {
+  .lap-and-up-one-half, .lap-and-up-two-quarters, .lap-and-up-three-sixths, .lap-and-up-four-eighths, .lap-and-up-five-tenths, .lap-and-up-six-twelfths {
+    width: 50% !important;
+  }
+}
+
+/**
+ * Thirds.
+ */
+@media screen and (min-width: 720px) {
+  .lap-and-up-one-third, .lap-and-up-two-sixths, .lap-and-up-three-nineths, .lap-and-up-four-twelfths {
+    width: 33.3333333% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-two-thirds, .lap-and-up-four-sixths, .lap-and-up-six-nineths, .lap-and-up-eight-twelfths {
+    width: 66.6666666% !important;
+  }
+}
+
+/**
+ * Quarters.
+ */
+@media screen and (min-width: 720px) {
+  .lap-and-up-one-quarter, .lap-and-up-two-eighths, .lap-and-up-three-twelfths {
+    width: 25% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-three-quarters, .lap-and-up-six-eighths, .lap-and-up-nine-twelfths {
+    width: 75% !important;
+  }
+}
+
+/**
+ * Fifths.
+ */
+@media screen and (min-width: 720px) {
+  .lap-and-up-one-fifth, .lap-and-up-two-tenths {
+    width: 20% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-two-fifths, .lap-and-up-four-tenths {
+    width: 40% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-three-fifths, .lap-and-up-six-tenths {
+    width: 60% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-four-fifths, .lap-and-up-eight-tenths {
+    width: 80% !important;
+  }
+}
+
+/**
+ * Sixthss.
+ */
+@media screen and (min-width: 720px) {
+  .lap-and-up-one-sixth, .lap-and-up-two-twelfths {
+    width: 16.6666666% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-five-sixths, .lap-and-up-ten-twelfths {
+    width: 83.3333333% !important;
+  }
+}
+
+/**
+ * Eighths.
+ */
+@media screen and (min-width: 720px) {
+  .lap-and-up-one-eighth {
+    width: 12.5% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-three-eighths {
+    width: 37.5% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-five-eighths {
+    width: 62.5% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-seven-eighths {
+    width: 87.5% !important;
+  }
+}
+
+/**
+ * Ninths.
+ */
+@media screen and (min-width: 720px) {
+  .lap-and-up-one-nineth {
+    width: 11.1111111% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-two-nineths {
+    width: 22.2222222% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-four-nineths {
+    width: 44.4444444% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-five-nineths {
+    width: 55.5555555% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-seven-nineths {
+    width: 77.7777777% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-eight-nineths {
+    width: 88.8888888% !important;
+  }
+}
+
+/**
+ * Tenths.
+ */
+@media screen and (min-width: 720px) {
+  .lap-and-up-one-tenth {
+    width: 10% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-three-tenths {
+    width: 30% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-seven-tenths {
+    width: 70% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-nine-tenths {
+    width: 90% !important;
+  }
+}
+
+/**
+ * Twelfths.
+ */
+@media screen and (min-width: 720px) {
+  .lap-and-up-one-twelfth {
+    width: 8.3333333% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-five-twelfths {
+    width: 41.6666666% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-seven-twelfths {
+    width: 58.3333333% !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .lap-and-up-eleven-twelfths {
+    width: 91.6666666% !important;
+  }
+}
+
+/**
+ * Whole.
+ */
+@media screen and (max-width: 1023px) {
+  .portable-one-whole {
+    width: 100% !important;
+  }
+}
+
+/**
+ * Halves.
+ */
+@media screen and (max-width: 1023px) {
+  .portable-one-half, .portable-two-quarters, .portable-three-sixths, .portable-four-eighths, .portable-five-tenths, .portable-six-twelfths {
+    width: 50% !important;
+  }
+}
+
+/**
+ * Thirds.
+ */
+@media screen and (max-width: 1023px) {
+  .portable-one-third, .portable-two-sixths, .portable-three-nineths, .portable-four-twelfths {
+    width: 33.3333333% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-two-thirds, .portable-four-sixths, .portable-six-nineths, .portable-eight-twelfths {
+    width: 66.6666666% !important;
+  }
+}
+
+/**
+ * Quarters.
+ */
+@media screen and (max-width: 1023px) {
+  .portable-one-quarter, .portable-two-eighths, .portable-three-twelfths {
+    width: 25% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-three-quarters, .portable-six-eighths, .portable-nine-twelfths {
+    width: 75% !important;
+  }
+}
+
+/**
+ * Fifths.
+ */
+@media screen and (max-width: 1023px) {
+  .portable-one-fifth, .portable-two-tenths {
+    width: 20% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-two-fifths, .portable-four-tenths {
+    width: 40% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-three-fifths, .portable-six-tenths {
+    width: 60% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-four-fifths, .portable-eight-tenths {
+    width: 80% !important;
+  }
+}
+
+/**
+ * Sixthss.
+ */
+@media screen and (max-width: 1023px) {
+  .portable-one-sixth, .portable-two-twelfths {
+    width: 16.6666666% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-five-sixths, .portable-ten-twelfths {
+    width: 83.3333333% !important;
+  }
+}
+
+/**
+ * Eighths.
+ */
+@media screen and (max-width: 1023px) {
+  .portable-one-eighth {
+    width: 12.5% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-three-eighths {
+    width: 37.5% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-five-eighths {
+    width: 62.5% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-seven-eighths {
+    width: 87.5% !important;
+  }
+}
+
+/**
+ * Ninths.
+ */
+@media screen and (max-width: 1023px) {
+  .portable-one-nineth {
+    width: 11.1111111% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-two-nineths {
+    width: 22.2222222% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-four-nineths {
+    width: 44.4444444% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-five-nineths {
+    width: 55.5555555% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-seven-nineths {
+    width: 77.7777777% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-eight-nineths {
+    width: 88.8888888% !important;
+  }
+}
+
+/**
+ * Tenths.
+ */
+@media screen and (max-width: 1023px) {
+  .portable-one-tenth {
+    width: 10% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-three-tenths {
+    width: 30% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-seven-tenths {
+    width: 70% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-nine-tenths {
+    width: 90% !important;
+  }
+}
+
+/**
+ * Twelfths.
+ */
+@media screen and (max-width: 1023px) {
+  .portable-one-twelfth {
+    width: 8.3333333% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-five-twelfths {
+    width: 41.6666666% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-seven-twelfths {
+    width: 58.3333333% !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .portable-eleven-twelfths {
+    width: 91.6666666% !important;
+  }
+}
+
+/**
+ * Whole.
+ */
+@media screen and (min-width: 1024px) {
+  .desk-one-whole {
+    width: 100% !important;
+  }
+}
+
+/**
+ * Halves.
+ */
+@media screen and (min-width: 1024px) {
+  .desk-one-half, .desk-two-quarters, .desk-three-sixths, .desk-four-eighths, .desk-five-tenths, .desk-six-twelfths {
+    width: 50% !important;
+  }
+}
+
+/**
+ * Thirds.
+ */
+@media screen and (min-width: 1024px) {
+  .desk-one-third, .desk-two-sixths, .desk-three-nineths, .desk-four-twelfths {
+    width: 33.3333333% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-two-thirds, .desk-four-sixths, .desk-six-nineths, .desk-eight-twelfths {
+    width: 66.6666666% !important;
+  }
+}
+
+/**
+ * Quarters.
+ */
+@media screen and (min-width: 1024px) {
+  .desk-one-quarter, .desk-two-eighths, .desk-three-twelfths {
+    width: 25% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-three-quarters, .desk-six-eighths, .desk-nine-twelfths {
+    width: 75% !important;
+  }
+}
+
+/**
+ * Fifths.
+ */
+@media screen and (min-width: 1024px) {
+  .desk-one-fifth, .nav__list, .desk-two-tenths {
+    width: 20% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-two-fifths, .desk-four-tenths {
+    width: 40% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-three-fifths, .desk-six-tenths {
+    width: 60% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-four-fifths, .section-piece__contents, .desk-eight-tenths {
+    width: 80% !important;
+  }
+}
+
+/**
+ * Sixthss.
+ */
+@media screen and (min-width: 1024px) {
+  .desk-one-sixth, .desk-two-twelfths {
+    width: 16.6666666% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-five-sixths, .desk-ten-twelfths {
+    width: 83.3333333% !important;
+  }
+}
+
+/**
+ * Eighths.
+ */
+@media screen and (min-width: 1024px) {
+  .desk-one-eighth {
+    width: 12.5% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-three-eighths {
+    width: 37.5% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-five-eighths {
+    width: 62.5% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-seven-eighths {
+    width: 87.5% !important;
+  }
+}
+
+/**
+ * Ninths.
+ */
+@media screen and (min-width: 1024px) {
+  .desk-one-nineth {
+    width: 11.1111111% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-two-nineths {
+    width: 22.2222222% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-four-nineths {
+    width: 44.4444444% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-five-nineths {
+    width: 55.5555555% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-seven-nineths {
+    width: 77.7777777% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-eight-nineths {
+    width: 88.8888888% !important;
+  }
+}
+
+/**
+ * Tenths.
+ */
+@media screen and (min-width: 1024px) {
+  .desk-one-tenth {
+    width: 10% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-three-tenths {
+    width: 30% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-seven-tenths {
+    width: 70% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-nine-tenths {
+    width: 90% !important;
+  }
+}
+
+/**
+ * Twelfths.
+ */
+@media screen and (min-width: 1024px) {
+  .desk-one-twelfth {
+    width: 8.3333333% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-five-twelfths {
+    width: 41.6666666% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-seven-twelfths {
+    width: 58.3333333% !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desk-eleven-twelfths {
+    width: 91.6666666% !important;
+  }
+}
+
+.header__contents-wrapper, .nav, .section-piece__contents-wrapper {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header,
+.header-placeholder {
+  height: 500px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fafafa;
+  font-family: 'Source Sans Pro';
+  z-index: 1000;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header__contents-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.header__contents {
+  position: absolute;
+  bottom: 50px;
+}
+
+.header__title {
+  font-weight: 900;
+  color: #16a085;
+  margin-bottom: 0;
+}
+.header__title--first-word {
+  color: #1abc9c;
+}
+
+.header__tag {
+  position: relative;
+  display: block;
+  margin-top: 50px;
+  color: #aaaaaa;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+/* nav */
+.nav {
+  position: relative;
+}
+
+/* ul */
+.nav__list {
+  float: left;
+}
+
+/* a */
+.nav__list-link {
+  display: block;
+  padding: 5px;
+  position: relative;
+  text-align: right;
+}
+.nav__list-link--selected, .nav__list-link:hover {
+  background-color: white;
+}
+.nav__list-link--selected {
+  font-weight: bold;
+}
+.nav__list-link--selected:before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  position: absolute;
+  left: 5px;
+  height: 100%;
+  top: 0;
+}
+
+.nav__list-link--selected.nav__list-link--work:before {
+  background-color: blue;
+}
+
+.sections__section {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* article */
+.section-piece__contents-wrapper {
+  padding: 29.7px 0 29.7px 29.7px;
+}
+
+.section-piece__contents {
+  float: right;
+  padding: 15px;
+}
+
+/* heading */
+.section-piece__title {
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+  text-align: right;
+}
+
+.section-piece:nth-child(2n) .section-piece__title {
+  text-align: left;
+}
+
+.section-piece--energenius {
+  background-image: url(../img/energenius.jpg);
+}
+
+.section-piece--energenius__title {
+  color: #c1d72e;
+}

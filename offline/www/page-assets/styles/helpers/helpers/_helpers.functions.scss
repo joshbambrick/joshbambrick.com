@@ -1,0 +1,4 @@
+@function no-units($num) {
+    // divide by 1 with the same units - units divided out
+    @return $num / (($num * 0) + 1);
+}

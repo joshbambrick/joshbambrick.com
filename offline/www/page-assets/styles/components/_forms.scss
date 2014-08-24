@@ -1,0 +1,13 @@
+%eg-text-input {
+    padding: 0;
+    border-style: none;
+    margin: 0;
+    outline-style: solid;
+    outline-color: #ccc;
+    
+    &:focus {
+        outline-color: colour(companyColor);
+        outline-offset: 0;
+        transition: outline-color 250ms;
+    }
+}

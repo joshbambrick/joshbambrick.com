@@ -1,0 +1,13 @@
+.section-piece {
+    -skrollr-animation-name: backgroundParallax;
+}
+
+@-skrollr-keyframes backgroundParallax {
+    top {
+        background-position: 0 -50px;
+    }
+
+    bottom {
+        background-position: 0 50px;
+    }
+}

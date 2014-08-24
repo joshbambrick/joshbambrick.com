@@ -1,0 +1,88 @@
+// the placeholders are for use only by the mixin (see further down)
+%_dialog-button {
+    $topColor: colour(panelBackground);
+    $bottomColor: colour(darkPanelBackground);
+
+    $hoverTopColor: $bottomColor;
+    $hoverBottomColor: darken($bottomColor, 3%);
+
+    $activeTopColor: $hoverBottomColor;
+    $activeBottomColor: $hoverTopColor;
+
+    margin: 0;
+    background-color: colour(panelBackground);
+    background-image: linear-gradient($topColor, $bottomColor);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $topColor), color-stop(1, $bottomColor));
+    border: solid 1px colour(border);
+    padding: 5px 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-align: center;
+    color: $generalText;
+
+    
+    &:hover {
+        background-image: linear-gradient($hoverTopColor, $hoverBottomColor);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $hoverTopColor), color-stop(1, $hoverBottomColor));
+        text-decoration: none;
+    }
+
+    &:active {
+        box-shadow: inset 0 0 20px -10px rgba(0, 0, 0, 0.3);
+        margin-top: 1px;
+        margin-bottom: -1px;
+        background-image: linear-gradient($activeTopColor, $activeBottomColor);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $activeTopColor), color-stop(1, $activeBottomColor));
+    }
+}
+
+%_primary-dialog-button {
+    $topColor: colour(companyColor);
+    $bottomColor: darken($topColor, 3%);
+    
+    $hoverTopColor: $topColor;
+    $hoverBottomColor: darken($bottomColor, 3%);
+
+    $activeTopColor: $hoverBottomColor;
+    $activeBottomColor: $bottomColor;
+
+    border: solid 1px #6fa11e;
+    color: colour(white);
+    background-color: #9ed83c;
+    background-image: linear-gradient($topColor, $bottomColor);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $topColor), color-stop(1, $bottomColor));
+    box-shadow: inset 0 0 0px 1px rgba(255, 255, 255, 0.4);
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    
+    &:hover {
+        border: solid 1px #66941c;
+        background-image: linear-gradient($hoverTopColor, $hoverBottomColor);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $hoverTopColor), color-stop(1, $hoverBottomColor));
+    }
+
+    &:active {
+        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.25);
+        background-image: linear-gradient($activeTopColor, $activeBottomColor);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $activeTopColor), color-stop(1, $activeBottomColor));
+    }
+}
+
+@mixin dialog-button($primaryClass: null, $primarySuffix: suffix) {
+    @extend %_dialog-button;
+    
+    &--primary {
+        @extend %_primary-dialog-button;
+    }
+    
+    @if ($primaryClass) {
+        &.#{$primaryClass} {
+            @extend %_primary-dialog-button;
+        }
+    }
+    
+    @if ($primarySuffix) {
+        &--#{$primarySuffix} {
+            @extend %_primary-dialog-button;
+        }
+    }
+}

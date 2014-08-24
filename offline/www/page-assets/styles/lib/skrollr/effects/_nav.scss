@@ -1,0 +1,25 @@
+.nav {
+    -skrollr-animation-name: navScroll;
+}
+
+@-skrollr-keyframes navScroll {
+    0 {
+        position: relative;
+        top: $lib-spacing-unit;
+        left: 0%;
+    }
+
+    #{400 - no-units($lib-spacing-unit--small) - 1} {
+        position: relative;
+        top: $lib-spacing-unit;
+        left: 0%;
+    }
+
+    #{400 - no-units($lib-spacing-unit--small)} {
+        position: fixed;
+        // -(height of title + height of tag)
+        // NOTE: must keep up to date with actual height
+        top: $tera + $lib-spacing-unit;
+        left: $section-side-padding;
+    }
+}

@@ -1,0 +1,51 @@
+/* nav */.nav {
+    // this means that the percentage widths defined for the list
+    // have the same relative value as those for the section pieces 
+    @extend %contents-section;
+
+    // NOTE: don't clearfix as this would affect the positioning of the section pieces
+
+    // this is overridden by skrollr effects
+    position: relative;
+}
+
+/* ul */.nav__list {
+    @extend %desk-one-fifth;
+    @extend %lap-one-quarter;
+    @extend %list-bare;
+    @extend %frosted;
+    float: left;
+}
+
+/* a */.nav__list-link {
+    display: block;
+    padding: 5px;
+
+    // positioner for :before element
+    position: relative;
+
+    text-align: right;
+
+    &--selected,
+    &:hover {
+        background-color: white;
+    }
+
+    &--selected {
+        font-weight: bold;
+
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            position: absolute;
+            left: 5px;
+            height: 100%;
+            top: 0;
+        }
+    }
+}
+
+.nav__list-link--selected.nav__list-link--work:before {
+    background-color: blue;
+}

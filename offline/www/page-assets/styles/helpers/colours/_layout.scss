@@ -1,0 +1,6 @@
+// colors used in the layout elements
+@include add-colour(light-panel-background, #fbfbfb);
+@include add-colour(panel-background, #f6f6f6);
+@include add-colour(dark-panel-background, #f3f3f3);
+@include add-colour(border, #e4e4e3);
+@include add-colour(card-white, colour(full-white));

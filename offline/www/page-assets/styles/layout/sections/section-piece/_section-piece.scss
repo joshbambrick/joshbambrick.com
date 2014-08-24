@@ -1,0 +1,33 @@
+/* article */.section-piece {
+    @extend %clearfix;
+}
+
+.section-piece__contents-wrapper {
+    @extend %contents-section;
+    @extend %clearfix;
+    padding: $lib-spacing-unit 0 $lib-spacing-unit $lib-spacing-unit;
+}
+
+.section-piece__contents {
+    @extend %desk-four-fifths;
+    @extend %lap-three-quarters;
+    @extend %frosted;
+    float: right;
+
+    padding: $lib-spacing-unit--small;
+}
+
+/* heading */.section-piece__title {
+    @extend .alpha;
+
+    font-family: "Source Sans Pro";
+    font-weight: 300;
+    text-align: right;
+}
+
+// even titles should be left-aligned
+.section-piece:nth-child(2n) {
+    .section-piece__title {
+        text-align: left;
+    }
+}

@@ -1,0 +1,52 @@
+// header-placeholder actually takes up the space on the screen
+.header,
+.header-placeholder {
+    height: 500px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: colour(white);
+    font-family: 'Source Sans Pro';
+    z-index: z(header);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+}
+
+.header__contents-wrapper {
+    @extend %contents-section;
+    position: relative;
+    height: 100%;
+}
+
+.header__contents {
+    position: absolute;
+    bottom: $header-vertical-spacing;
+}
+
+.header__title {
+    // if you change this extend, must update skrollr effects
+    @extend .tera;
+    
+    font-weight: 900;
+    color: colour(main-colour);
+    margin-bottom: 0;
+
+    &--first-word {
+        color: colour(complement-colour);
+    }
+}
+
+.header__tag {
+    // if you change this extend, must update skrollr effects
+    @extend .gamma;
+
+    position: relative;
+    display: block;
+    margin-top: $header-vertical-spacing;
+    color: colour(light-colour);
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 0;
+}
