@@ -3,6 +3,9 @@
 }
 
 @-skrollr-keyframes backgroundParallax {
+	// see more of top, and less of bottom as you move down
+	// this is definitely the correct idea although the below
+	// strategy to implement it may need work
     top {
         background-position: 0 -50px;
     }

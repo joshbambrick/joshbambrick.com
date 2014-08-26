@@ -11,3 +11,7 @@
     Sass, inuitcss, Typeplate
     Modernizr, HTML5Boilerplate, html5shiv
     jQuery, Backbone, Underscore, RequireJS
+
+# SOURCE
+    
+    github.com/joshbambrick/joshbambrick.com

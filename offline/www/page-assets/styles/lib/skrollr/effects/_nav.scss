@@ -4,22 +4,19 @@
 
 @-skrollr-keyframes navScroll {
     0 {
-        position: relative;
-        top: $lib-spacing-unit;
-        left: 0%;
+        position: unquote("!" + relative);
+        top: unquote("!" + $lib-spacing-unit);
+        left: unquote("!" + 0%);
     }
 
-    #{400 - no-units($lib-spacing-unit--small) - 1} {
-        position: relative;
-        top: $lib-spacing-unit;
-        left: 0%;
-    }
-
+    // change when reaches padding at top
+    // otherwise nav will drop down suddenly to
+    // accommodate padding when it reaches this points
     #{400 - no-units($lib-spacing-unit--small)} {
-        position: fixed;
+        position: unquote("!" + fixed);
         // -(height of title + height of tag)
         // NOTE: must keep up to date with actual height
-        top: $tera + $lib-spacing-unit;
-        left: $section-side-padding;
+        top: unquote("!" + ($tera + $lib-spacing-unit));
+        left: unquote("!" + $section-side-padding);
     }
 }
