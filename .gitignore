@@ -40,6 +40,6 @@ Icon
 # Custom Files/Folders
 # =========================
 
-/online/
+/live/
 /node_modules/
-/offline/node_modules/
+/dev/node_modules/
